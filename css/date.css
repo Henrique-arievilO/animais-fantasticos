@@ -1,0 +1,24 @@
+[data-week]::after {
+  display: inline-block;
+  content: "";
+  width: 8px;
+  height: 8px;
+  margin-left: 4px;
+  background: #E54;
+  border-radius: 50%;
+  animation: blink 1.2s infinite forwards;
+}
+
+[data-week].open::after {
+  background: #3F4;
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
