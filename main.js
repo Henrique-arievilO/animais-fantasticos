@@ -1,2 +1,383 @@
-/*! For license information please see main.js.LICENSE.txt */
-(()=>{var t={633(t,e,r){var n=r(738).default;function o(){"use strict";t.exports=o=function(){return r},t.exports.__esModule=!0,t.exports.default=t.exports;var e,r={},i=Object.prototype,a=i.hasOwnProperty,c=Object.defineProperty||function(t,e,r){t[e]=r.value},u="function"==typeof Symbol?Symbol:{},s=u.iterator||"@@iterator",l=u.asyncIterator||"@@asyncIterator",f=u.toStringTag||"@@toStringTag";function h(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{h({},"")}catch(e){h=function(t,e,r){return t[e]=r}}function d(t,e,r,n){var o=e&&e.prototype instanceof L?e:L,i=Object.create(o.prototype),a=new P(n||[]);return c(i,"_invoke",{value:q(t,r,a)}),i}function v(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}r.wrap=d;var p="suspendedStart",y="suspendedYield",m="executing",g="completed",b={};function L(){}function w(){}function x(){}var E={};h(E,s,function(){return this});var S=Object.getPrototypeOf,k=S&&S(S(N([])));k&&k!==i&&a.call(k,s)&&(E=k);var _=x.prototype=L.prototype=Object.create(E);function j(t){["next","throw","return"].forEach(function(e){h(t,e,function(t){return this._invoke(e,t)})})}function O(t,e){function r(o,i,c,u){var s=v(t[o],t,i);if("throw"!==s.type){var l=s.arg,f=l.value;return f&&"object"==n(f)&&a.call(f,"__await")?e.resolve(f.__await).then(function(t){r("next",t,c,u)},function(t){r("throw",t,c,u)}):e.resolve(f).then(function(t){l.value=t,c(l)},function(t){return r("throw",t,c,u)})}u(s.arg)}var o;c(this,"_invoke",{value:function(t,n){function i(){return new e(function(e,o){r(t,n,e,o)})}return o=o?o.then(i,i):i()}})}function q(t,r,n){var o=p;return function(i,a){if(o===m)throw Error("Generator is already running");if(o===g){if("throw"===i)throw a;return{value:e,done:!0}}for(n.method=i,n.arg=a;;){var c=n.delegate;if(c){var u=A(c,n);if(u){if(u===b)continue;return u}}if("next"===n.method)n.sent=n._sent=n.arg;else if("throw"===n.method){if(o===p)throw o=g,n.arg;n.dispatchException(n.arg)}else"return"===n.method&&n.abrupt("return",n.arg);o=m;var s=v(t,r,n);if("normal"===s.type){if(o=n.done?g:y,s.arg===b)continue;return{value:s.arg,done:n.done}}"throw"===s.type&&(o=g,n.method="throw",n.arg=s.arg)}}}function A(t,r){var n=r.method,o=t.iterator[n];if(o===e)return r.delegate=null,"throw"===n&&t.iterator.return&&(r.method="return",r.arg=e,A(t,r),"throw"===r.method)||"return"!==n&&(r.method="throw",r.arg=new TypeError("The iterator does not provide a '"+n+"' method")),b;var i=v(o,t.iterator,r.arg);if("throw"===i.type)return r.method="throw",r.arg=i.arg,r.delegate=null,b;var a=i.arg;return a?a.done?(r[t.resultName]=a.value,r.next=t.nextLoc,"return"!==r.method&&(r.method="next",r.arg=e),r.delegate=null,b):a:(r.method="throw",r.arg=new TypeError("iterator result is not an object"),r.delegate=null,b)}function M(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function T(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function P(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(M,this),this.reset(!0)}function N(t){if(t||""===t){var r=t[s];if(r)return r.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var o=-1,i=function r(){for(;++o<t.length;)if(a.call(t,o))return r.value=t[o],r.done=!1,r;return r.value=e,r.done=!0,r};return i.next=i}}throw new TypeError(n(t)+" is not iterable")}return w.prototype=x,c(_,"constructor",{value:x,configurable:!0}),c(x,"constructor",{value:w,configurable:!0}),w.displayName=h(x,f,"GeneratorFunction"),r.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===w||"GeneratorFunction"===(e.displayName||e.name))},r.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,x):(t.__proto__=x,h(t,f,"GeneratorFunction")),t.prototype=Object.create(_),t},r.awrap=function(t){return{__await:t}},j(O.prototype),h(O.prototype,l,function(){return this}),r.AsyncIterator=O,r.async=function(t,e,n,o,i){void 0===i&&(i=Promise);var a=new O(d(t,e,n,o),i);return r.isGeneratorFunction(e)?a:a.next().then(function(t){return t.done?t.value:a.next()})},j(_),h(_,f,"Generator"),h(_,s,function(){return this}),h(_,"toString",function(){return"[object Generator]"}),r.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},r.values=N,P.prototype={constructor:P,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=e,this.done=!1,this.delegate=null,this.method="next",this.arg=e,this.tryEntries.forEach(T),!t)for(var r in this)"t"===r.charAt(0)&&a.call(this,r)&&!isNaN(+r.slice(1))&&(this[r]=e)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var r=this;function n(n,o){return c.type="throw",c.arg=t,r.next=n,o&&(r.method="next",r.arg=e),!!o}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],c=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var u=a.call(i,"catchLoc"),s=a.call(i,"finallyLoc");if(u&&s){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!s)throw Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var n=this.tryEntries[r];if(n.tryLoc<=this.prev&&a.call(n,"finallyLoc")&&this.prev<n.finallyLoc){var o=n;break}}o&&("break"===t||"continue"===t)&&o.tryLoc<=e&&e<=o.finallyLoc&&(o=null);var i=o?o.completion:{};return i.type=t,i.arg=e,o?(this.method="next",this.next=o.finallyLoc,b):this.complete(i)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),b},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),T(r),b}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;T(r)}return o}}throw Error("illegal catch attempt")},delegateYield:function(t,r,n){return this.delegate={iterator:N(t),resultName:r,nextLoc:n},"next"===this.method&&(this.arg=e),b}},r}t.exports=o,t.exports.__esModule=!0,t.exports.default=t.exports},738(t){function e(r){return t.exports=e="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t},t.exports.__esModule=!0,t.exports.default=t.exports,e(r)}t.exports=e,t.exports.__esModule=!0,t.exports.default=t.exports},756(t,e,r){var n=r(633)();t.exports=n;try{regeneratorRuntime=n}catch(t){"object"==typeof globalThis?globalThis.regeneratorRuntime=n:Function("r","regeneratorRuntime = r")(n)}}};const e={};function r(n){const o=e[n];if(void 0!==o)return o.exports;const i=e[n]={exports:{}};return t[n](i,i.exports,r),i.exports}r.n=t=>{const e=t&&t.__esModule?()=>t.default:()=>t;return r.d(e,{a:e}),e},r.d=(t,e)=>{if(Array.isArray(e))for(var n=0;n<e.length;){var o=e[n++],i=e[n++];r.o(t,o)?0===i&&n++:0===i?Object.defineProperty(t,o,{enumerable:!0,value:e[n++]}):Object.defineProperty(t,o,{enumerable:!0,get:i})}else for(var o in e)r.o(e,o)&&!r.o(t,o)&&Object.defineProperty(t,o,{enumerable:!0,get:e[o]})},r.o=(t,e)=>Object.prototype.hasOwnProperty.call(t,e),(()=>{"use strict";var t="active",e="active",n="active";function o(t,e,r){var n=document.documentElement,o="data-outside";function i(a){t.contains(a.target)||(t.removeAttribute(o),e.forEach(function(t){n.removeEventListener(t,i)}),r())}t.hasAttribute(o)||(e.forEach(function(t){setTimeout(function(){n.addEventListener(t,i)})}),t.setAttribute(o,""))}var i="active",a=document.querySelectorAll("[data-dropdown]");function c(t){var e=this;t.preventDefault(),this.classList.add(i),o(this,["touchstart","click"],function(){e.classList.remove(i)})}a.length&&a.forEach(function(t){["touchstart","click"].forEach(function(e){t.addEventListener(e,c)})});var u="active";function s(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}var l,f,h=r(756),d=r.n(h);function v(){var t=document.querySelector(".numbers"),e=new MutationObserver(function(t){t[0].target.classList.contains("active")&&(e.disconnect(),document.querySelectorAll("[data-number]").forEach(function(t){var e=+t.innerText,r=Math.floor(e/100),n=0,o=setInterval(function(){n+=r,t.innerText=n,n>e&&(t.innerText=e,clearInterval(o))},25*Math.random())}))});e.observe(t,{attributes:!0})}fetch("https://blockchain.info/ticker").then(function(t){return t.json()}).then(function(t){document.querySelector(".btc-price").innerText=(1e3/t.BRL.sell).toFixed(4)}).catch(function(t){window.alert(Error(t))}),function(){var t=document.querySelectorAll('[data-anime="accordion"] dt');function e(){this.classList.toggle(n),this.nextElementSibling.classList.toggle(n)}t.length&&(t[0].classList.add(n),t[0].nextElementSibling.classList.add(n),t.forEach(function(t){t.addEventListener("click",e)}))}(),l=document.querySelectorAll('[data-tab="menu"] li'),(f=document.querySelectorAll('[data-tab="content"] section'))[0].classList.add(t),l.length&&f.length&&l.forEach(function(e,r){e.addEventListener("click",function(){!function(e){f.forEach(function(e){e.classList.remove(t)});var r=f[e].dataset.anime;f[e].classList.add(t,r)}(r)})}),function(){function t(t){t.preventDefault();var e=t.currentTarget.getAttribute("href");document.querySelector(e).scrollIntoView({behavior:"smooth",block:"start"})}document.querySelectorAll('[data-menu="smooth"] a[href^="#"]').forEach(function(e){e.addEventListener("click",t)})}(),function(){var t=document.querySelectorAll('[data-anime="scroll"'),r=.5*window.innerHeight;function n(){t.forEach(function(t){t.getBoundingClientRect().top-r-r<0?t.classList.add(e):t.classList.contains(e)&&t.classList.remove(e)})}t.length&&(n(),window.addEventListener("scroll",n))}(),function(){var t=document.querySelector('[data-modal="open"]'),e=document.querySelector('[data-modal="close"]'),r=document.querySelector('[data-modal="container"]');function n(t){t.preventDefault(),r.classList.toggle("active")}t&&e&&r&&(t.addEventListener("click",n),e.addEventListener("click",n),r.addEventListener("click",function(t){t.target===this&&n(t)}))}(),function(){var t=document.querySelectorAll("[data-tooltip]");function e(t){var e=function(t){var e=document.createElement("div");e.classList.add("tooltip");var r=t.getAttribute("aria-label");return e.innerText=r,document.body.appendChild(e),e}(this);onMouseMove.tooltipBox=e,this.addEventListener("mousemove",onMouseMove),onMouseLeave.tooltipBox=e,onMouseLeave.element=this,this.addEventListener("mouseleave",onMouseLeave)}t&&t.forEach(function(t){t.addEventListener("mouseover",e)})}(),function(){var t=document.querySelector('[data-menu="button"]'),e=document.querySelector('[data-menu="list"]'),r=["click","touchstart"];function n(n){t.classList.add(u),e.classList.add(u),o(e,r,function(){t.classList.remove(u),e.classList.remove(u)})}t&&r.forEach(function(e){t.addEventListener("click",n)})}(),function(){var t=document.querySelector("[data-week]");if(t){var e=t.dataset.week.split(",").map(Number),r=t.dataset.hour.split(",").map(Number),n=new Date,o=n.getDay(),i=n.getHours(),a=-1!==e.indexOf(o),c=i>=r[0]&&i<r[1];a&&c&&t.classList.add("open")}}(),function(){function t(){var r;return r=d().mark(function t(r){var n,o;return d().wrap(function(t){for(;;)switch(t.prev=t.next){case 0:return t.prev=0,t.next=1,fetch(r);case 1:return n=t.sent,t.next=2,n.json();case 2:t.sent.forEach(function(t){var r=e(t);document.querySelector(".grid-numbers").appendChild(r)}),v(),t.next=4;break;case 3:t.prev=3,o=t.catch(0),window.alert(Error(o));case 4:case"end":return t.stop()}},t,null,[[0,3]])}),t=function(){var t=this,e=arguments;return new Promise(function(n,o){var i=r.apply(t,e);function a(t){s(i,n,o,a,c,"next",t)}function c(t){s(i,n,o,a,c,"throw",t)}a(void 0)})},t.apply(this,arguments)}function e(t){var e=document.createElement("div");return e.classList.add("animal-number"),e.innerHTML="<h3>".concat(t.specie,"</h3>\n  <span data-number>").concat(t.total,"</span>"),e}!function(e){t.apply(this,arguments)}("../../animaisApi.json")}()})()})();
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./js/modules/initAccordion.js"
+/*!*************************************!*\
+  !*** ./js/modules/initAccordion.js ***!
+  \*************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initAccordion)\n/* harmony export */ });\nvar activeClass = \"active\";\nfunction initAccordion() {\n  var accordionList = document.querySelectorAll('[data-anime=\"accordion\"] dt');\n  function activeAccordion() {\n    this.classList.toggle(activeClass);\n    this.nextElementSibling.classList.toggle(activeClass);\n  }\n  if (accordionList.length) {\n    accordionList[0].classList.add(activeClass);\n    accordionList[0].nextElementSibling.classList.add(activeClass);\n    accordionList.forEach(function (item) {\n      item.addEventListener(\"click\", activeAccordion);\n    });\n  }\n}\n\n//# sourceURL=webpack://animais-fantasticos/./js/modules/initAccordion.js?\n}");
+
+/***/ },
+
+/***/ "./js/modules/initAnimaNumbers.js"
+/*!****************************************!*\
+  !*** ./js/modules/initAnimaNumbers.js ***!
+  \****************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initAnimaNumbers)\n/* harmony export */ });\nvar activeClass = \"active\";\nfunction initAnimaNumbers() {\n  function animateNumber() {\n    var numbers = document.querySelectorAll(\"[data-number]\");\n    numbers.forEach(function (number) {\n      var total = +number.innerText;\n      var increase = Math.floor(total / 100);\n      var start = 0;\n      var timer = setInterval(function () {\n        start += increase;\n        number.innerText = start;\n        if (start > total) {\n          number.innerText = total;\n          clearInterval(timer);\n        }\n      }, 25 * Math.random());\n    });\n  }\n  function handleMutation(mutation) {\n    if (mutation[0].target.classList.contains(activeClass)) {\n      observer.disconnect();\n      animateNumber();\n    }\n  }\n  var observeTarget = document.querySelector(\".numbers\");\n  var observer = new MutationObserver(handleMutation);\n  observer.observe(observeTarget, {\n    attributes: true\n  });\n}\n\n//# sourceURL=webpack://animais-fantasticos/./js/modules/initAnimaNumbers.js?\n}");
+
+/***/ },
+
+/***/ "./js/modules/initAnimeScroll.js"
+/*!***************************************!*\
+  !*** ./js/modules/initAnimeScroll.js ***!
+  \***************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initAnimeScroll)\n/* harmony export */ });\nvar activeClass = \"active\";\nfunction initAnimeScroll() {\n  var sections = document.querySelectorAll('[data-anime=\"scroll\"');\n  var windowHalf = window.innerHeight * 0.5;\n  function animeScroll() {\n    sections.forEach(function (section) {\n      var sectionTop = section.getBoundingClientRect().top - windowHalf;\n      var isSectionVisible = sectionTop - windowHalf < 0;\n      if (isSectionVisible) {\n        section.classList.add(activeClass);\n      } else if (section.classList.contains(activeClass)) {\n        section.classList.remove(activeClass);\n      }\n    });\n  }\n  if (sections.length) {\n    animeScroll();\n    window.addEventListener(\"scroll\", animeScroll);\n  }\n}\n\n//# sourceURL=webpack://animais-fantasticos/./js/modules/initAnimeScroll.js?\n}");
+
+/***/ },
+
+/***/ "./js/modules/initDropdownMenu.js"
+/*!****************************************!*\
+  !*** ./js/modules/initDropdownMenu.js ***!
+  \****************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initDropdownMenu)\n/* harmony export */ });\n/* harmony import */ var _initOutsideClick_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./initOutsideClick.js */ \"./js/modules/initOutsideClick.js\");\n\nvar activeClass = \"active\";\nfunction initDropdownMenu() {}\nvar dropdownMenus = document.querySelectorAll(\"[data-dropdown]\");\nfunction handleClick(event) {\n  var _this = this;\n  event.preventDefault();\n  this.classList.add(activeClass);\n  (0,_initOutsideClick_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(this, [\"touchstart\", \"click\"], function () {\n    _this.classList.remove(activeClass);\n  });\n}\nif (dropdownMenus.length) {\n  dropdownMenus.forEach(function (menu) {\n    [\"touchstart\", \"click\"].forEach(function (userEvent) {\n      menu.addEventListener(userEvent, handleClick);\n    });\n  });\n}\n\n//# sourceURL=webpack://animais-fantasticos/./js/modules/initDropdownMenu.js?\n}");
+
+/***/ },
+
+/***/ "./js/modules/initFetchAnimais.js"
+/*!****************************************!*\
+  !*** ./js/modules/initFetchAnimais.js ***!
+  \****************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initFetchAnimais)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ \"./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"./node_modules/@babel/runtime/regenerator/index.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _initAnimaNumbers_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./initAnimaNumbers.js */ \"./js/modules/initAnimaNumbers.js\");\n\n\n\nfunction initFetchAnimais() {\n  function fetchAnimais(_x) {\n    return _fetchAnimais.apply(this, arguments);\n  }\n  function _fetchAnimais() {\n    _fetchAnimais = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(/*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().mark(function _callee(url) {\n      var animaisResponse, animaisJSON, _t;\n      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default().wrap(function (_context) {\n        while (1) switch (_context.prev = _context.next) {\n          case 0:\n            _context.prev = 0;\n            _context.next = 1;\n            return fetch(url);\n          case 1:\n            animaisResponse = _context.sent;\n            _context.next = 2;\n            return animaisResponse.json();\n          case 2:\n            animaisJSON = _context.sent;\n            animaisJSON.forEach(function (animal) {\n              var divAnimal = createAnimal(animal);\n              var gridNumber = document.querySelector(\".grid-numbers\");\n              gridNumber.appendChild(divAnimal);\n            });\n            (0,_initAnimaNumbers_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n            _context.next = 4;\n            break;\n          case 3:\n            _context.prev = 3;\n            _t = _context[\"catch\"](0);\n            window.alert(Error(_t));\n          case 4:\n          case \"end\":\n            return _context.stop();\n        }\n      }, _callee, null, [[0, 3]]);\n    }));\n    return _fetchAnimais.apply(this, arguments);\n  }\n  function createAnimal(animal) {\n    var div = document.createElement(\"div\");\n    div.classList.add(\"animal-number\");\n    div.innerHTML = \"<h3>\".concat(animal.specie, \"</h3>\\n  <span data-number>\").concat(animal.total, \"</span>\");\n    return div;\n  }\n  fetchAnimais(\"../../animaisApi.json\");\n}\n\n//# sourceURL=webpack://animais-fantasticos/./js/modules/initFetchAnimais.js?\n}");
+
+/***/ },
+
+/***/ "./js/modules/initFetchBitcoin.js"
+/*!****************************************!*\
+  !*** ./js/modules/initFetchBitcoin.js ***!
+  \****************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initFetchBitcoin)\n/* harmony export */ });\nfunction initFetchBitcoin() {}\nfetch(\"https://blockchain.info/ticker\").then(function (response) {\n  return response.json();\n}).then(function (bitcoin) {\n  var btcPrice = document.querySelector(\".btc-price\");\n  btcPrice.innerText = (1000 / bitcoin.BRL.sell).toFixed(4);\n})[\"catch\"](function (error) {\n  window.alert(Error(error));\n});\n//https://blockchain.info/ticker\n\n//# sourceURL=webpack://animais-fantasticos/./js/modules/initFetchBitcoin.js?\n}");
+
+/***/ },
+
+/***/ "./js/modules/initMenuMobile.js"
+/*!**************************************!*\
+  !*** ./js/modules/initMenuMobile.js ***!
+  \**************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initMenuMobile)\n/* harmony export */ });\n/* harmony import */ var _initOutsideClick_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./initOutsideClick.js */ \"./js/modules/initOutsideClick.js\");\n\nvar activeClass = \"active\";\nfunction initMenuMobile() {\n  var menuButton = document.querySelector('[data-menu=\"button\"]');\n  var menuList = document.querySelector('[data-menu=\"list\"]');\n  var events = [\"click\", \"touchstart\"];\n  function openMenu(event) {\n    menuButton.classList.add(activeClass);\n    menuList.classList.add(activeClass);\n    (0,_initOutsideClick_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(menuList, events, function () {\n      menuButton.classList.remove(activeClass);\n      menuList.classList.remove(activeClass);\n    });\n  }\n  if (menuButton) {\n    events.forEach(function (event) {\n      menuButton.addEventListener(\"click\", openMenu);\n    });\n  }\n}\n\n//# sourceURL=webpack://animais-fantasticos/./js/modules/initMenuMobile.js?\n}");
+
+/***/ },
+
+/***/ "./js/modules/initModal.js"
+/*!*********************************!*\
+  !*** ./js/modules/initModal.js ***!
+  \*********************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initModal)\n/* harmony export */ });\nvar activeClass = \"active\";\nfunction initModal() {\n  var openButton = document.querySelector('[data-modal=\"open\"]');\n  var closeButton = document.querySelector('[data-modal=\"close\"]');\n  var modalContainer = document.querySelector('[data-modal=\"container\"]');\n  function toggleModal(event) {\n    event.preventDefault();\n    modalContainer.classList.toggle(activeClass);\n  }\n  function clickOutsideModal(event) {\n    if (event.target === this) {\n      toggleModal(event);\n    }\n  }\n  if (openButton && closeButton && modalContainer) {\n    openButton.addEventListener(\"click\", toggleModal);\n    closeButton.addEventListener(\"click\", toggleModal);\n    modalContainer.addEventListener(\"click\", clickOutsideModal);\n  }\n}\n\n//# sourceURL=webpack://animais-fantasticos/./js/modules/initModal.js?\n}");
+
+/***/ },
+
+/***/ "./js/modules/initOperation.js"
+/*!*************************************!*\
+  !*** ./js/modules/initOperation.js ***!
+  \*************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initOperation)\n/* harmony export */ });\nvar openClass = \"open\";\nfunction initOperation() {\n  var operation = document.querySelector(\"[data-week]\");\n  if (operation) {\n    var weekDays = operation.dataset.week.split(\",\").map(Number); //.map(Number) transforma em número\n    var weekHours = operation.dataset.hour.split(\",\").map(Number);\n    var dateNow = new Date();\n    var today = dateNow.getDay();\n    var timeNow = dateNow.getHours();\n    var operationDay = weekDays.indexOf(today) !== -1;\n    var operationHour = timeNow >= weekHours[0] && timeNow < weekHours[1];\n    if (operationDay && operationHour) {\n      operation.classList.add(openClass);\n    }\n  }\n}\n\n//# sourceURL=webpack://animais-fantasticos/./js/modules/initOperation.js?\n}");
+
+/***/ },
+
+/***/ "./js/modules/initOutsideClick.js"
+/*!****************************************!*\
+  !*** ./js/modules/initOutsideClick.js ***!
+  \****************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ outsideClick)\n/* harmony export */ });\nfunction outsideClick(element, events, callback) {\n  var html = document.documentElement;\n  var outside = \"data-outside\";\n  if (!element.hasAttribute(outside)) {\n    events.forEach(function (userEvent) {\n      setTimeout(function () {\n        html.addEventListener(userEvent, handleOutsideClick);\n      });\n    });\n    element.setAttribute(outside, \"\");\n  }\n  function handleOutsideClick(event) {\n    if (!element.contains(event.target)) {\n      element.removeAttribute(outside);\n      events.forEach(function (userEvent) {\n        html.removeEventListener(userEvent, handleOutsideClick);\n      });\n      callback();\n    }\n  }\n}\n\n//# sourceURL=webpack://animais-fantasticos/./js/modules/initOutsideClick.js?\n}");
+
+/***/ },
+
+/***/ "./js/modules/initSmoothScroll.js"
+/*!****************************************!*\
+  !*** ./js/modules/initSmoothScroll.js ***!
+  \****************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initSmoothScroll)\n/* harmony export */ });\nvar activeClass = \"active\";\nfunction initSmoothScroll() {\n  var linksInternos = document.querySelectorAll('[data-menu=\"smooth\"] a[href^=\"#\"]');\n  function scrollToSection(event) {\n    event.preventDefault();\n    var href = event.currentTarget.getAttribute(\"href\");\n    var section = document.querySelector(href);\n    section.scrollIntoView({\n      behavior: \"smooth\",\n      block: \"start\"\n    });\n  }\n  linksInternos.forEach(function (link) {\n    link.addEventListener(\"click\", scrollToSection);\n  });\n}\n\n//# sourceURL=webpack://animais-fantasticos/./js/modules/initSmoothScroll.js?\n}");
+
+/***/ },
+
+/***/ "./js/modules/initTabNav.js"
+/*!**********************************!*\
+  !*** ./js/modules/initTabNav.js ***!
+  \**********************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initTabNav)\n/* harmony export */ });\nvar activeClass = \"active\";\nfunction initTabNav() {\n  var tabMenu = document.querySelectorAll('[data-tab=\"menu\"] li');\n  var tabContent = document.querySelectorAll('[data-tab=\"content\"] section');\n  tabContent[0].classList.add(activeClass);\n  function activeTab(index) {\n    tabContent.forEach(function (section) {\n      section.classList.remove(activeClass);\n    });\n    var direction = tabContent[index].dataset.anime;\n    tabContent[index].classList.add(activeClass, direction);\n  }\n  if (tabMenu.length && tabContent.length) {\n    tabMenu.forEach(function (itemMenu, index) {\n      itemMenu.addEventListener(\"click\", function () {\n        activeTab(index);\n      });\n    });\n  }\n}\n\n//# sourceURL=webpack://animais-fantasticos/./js/modules/initTabNav.js?\n}");
+
+/***/ },
+
+/***/ "./js/modules/initTooltip.js"
+/*!***********************************!*\
+  !*** ./js/modules/initTooltip.js ***!
+  \***********************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initTooltip)\n/* harmony export */ });\nvar activeClass = \"active\";\nfunction initTooltip() {\n  var tooltips = document.querySelectorAll(\"[data-tooltip]\");\n  function createTooltipBox(element) {\n    var tooltipBox = document.createElement(\"div\");\n    tooltipBox.classList.add(\"tooltip\");\n    var text = element.getAttribute(\"aria-label\");\n    tooltipBox.innerText = text;\n    document.body.appendChild(tooltipBox);\n    return tooltipBox;\n  }\n  function onMouseOver(event) {\n    var tooltipBox = createTooltipBox(this);\n    onMouseMove.tooltipBox = tooltipBox;\n    this.addEventListener(\"mousemove\", onMouseMove);\n    onMouseLeave.tooltipBox = tooltipBox;\n    onMouseLeave.element = this;\n    this.addEventListener(\"mouseleave\", onMouseLeave);\n  }\n  if (tooltips) {\n    var _onMouseLeave = {\n      handleEvent: function handleEvent() {\n        this.tooltipBox.remove();\n        this.element.removeEventListener(\"mouseleave\", _onMouseLeave);\n        this.element.removeEventListener(\"mousemove\", _onMouseMove);\n      }\n    };\n    var _onMouseMove = {\n      handleEvent: function handleEvent(event) {\n        this.tooltipBox.style.top = event.pageY + 20 + \"px\";\n        this.tooltipBox.style.left = event.pageX + 20 + \"px\";\n      }\n    };\n    tooltips.forEach(function (item) {\n      item.addEventListener(\"mouseover\", onMouseOver);\n    });\n  }\n}\n\n//# sourceURL=webpack://animais-fantasticos/./js/modules/initTooltip.js?\n}");
+
+/***/ },
+
+/***/ "./js/script.js"
+/*!**********************!*\
+  !*** ./js/script.js ***!
+  \**********************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_initSmoothScroll_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/initSmoothScroll.js */ \"./js/modules/initSmoothScroll.js\");\n/* harmony import */ var _modules_initTabNav_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/initTabNav.js */ \"./js/modules/initTabNav.js\");\n/* harmony import */ var _modules_initAnimeScroll_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/initAnimeScroll.js */ \"./js/modules/initAnimeScroll.js\");\n/* harmony import */ var _modules_initAccordion_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/initAccordion.js */ \"./js/modules/initAccordion.js\");\n/* harmony import */ var _modules_initModal_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/initModal.js */ \"./js/modules/initModal.js\");\n/* harmony import */ var _modules_initTooltip_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/initTooltip.js */ \"./js/modules/initTooltip.js\");\n/* harmony import */ var _modules_initDropdownMenu_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/initDropdownMenu.js */ \"./js/modules/initDropdownMenu.js\");\n/* harmony import */ var _modules_initMenuMobile_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/initMenuMobile.js */ \"./js/modules/initMenuMobile.js\");\n/* harmony import */ var _modules_initOperation_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/initOperation.js */ \"./js/modules/initOperation.js\");\n/* harmony import */ var _modules_initFetchAnimais_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/initFetchAnimais.js */ \"./js/modules/initFetchAnimais.js\");\n/* harmony import */ var _modules_initFetchBitcoin_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/initFetchBitcoin.js */ \"./js/modules/initFetchBitcoin.js\");\n\n\n\n\n\n\n\n\n\n\n\n// import $ from \"jquery\";\n// import _ from \"lodash\";\n\n(0,_modules_initAccordion_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n(0,_modules_initTabNav_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n(0,_modules_initSmoothScroll_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n(0,_modules_initAnimeScroll_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n(0,_modules_initModal_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\n(0,_modules_initTooltip_js__WEBPACK_IMPORTED_MODULE_5__[\"default\"])();\n(0,_modules_initDropdownMenu_js__WEBPACK_IMPORTED_MODULE_6__[\"default\"])();\n(0,_modules_initMenuMobile_js__WEBPACK_IMPORTED_MODULE_7__[\"default\"])();\n(0,_modules_initOperation_js__WEBPACK_IMPORTED_MODULE_8__[\"default\"])();\n(0,_modules_initFetchAnimais_js__WEBPACK_IMPORTED_MODULE_9__[\"default\"])();\n(0,_modules_initFetchBitcoin_js__WEBPACK_IMPORTED_MODULE_10__[\"default\"])();\n\n//# sourceURL=webpack://animais-fantasticos/./js/script.js?\n}");
+
+/***/ },
+
+/***/ "./node_modules/@babel/runtime/helpers/OverloadYield.js"
+/*!**************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/OverloadYield.js ***!
+  \**************************************************************/
+(module) {
+
+eval("{function _OverloadYield(e, d) {\n  this.v = e, this.k = d;\n}\nmodule.exports = _OverloadYield, module.exports.__esModule = true, module.exports[\"default\"] = module.exports;\n\n//# sourceURL=webpack://animais-fantasticos/./node_modules/@babel/runtime/helpers/OverloadYield.js?\n}");
+
+/***/ },
+
+/***/ "./node_modules/@babel/runtime/helpers/regenerator.js"
+/*!************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/regenerator.js ***!
+  \************************************************************/
+(module, __unused_webpack_exports, __webpack_require__) {
+
+eval("{var regeneratorDefine = __webpack_require__(/*! ./regeneratorDefine.js */ \"./node_modules/@babel/runtime/helpers/regeneratorDefine.js\");\nfunction _regenerator() {\n  /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */\n  var e,\n    t,\n    r = \"function\" == typeof Symbol ? Symbol : {},\n    n = r.iterator || \"@@iterator\",\n    o = r.toStringTag || \"@@toStringTag\";\n  function i(r, n, o, i) {\n    var c = n && n.prototype instanceof Generator ? n : Generator,\n      u = Object.create(c.prototype);\n    return regeneratorDefine(u, \"_invoke\", function (r, n, o) {\n      var i,\n        c,\n        u,\n        f = 0,\n        p = o || [],\n        y = !1,\n        G = {\n          p: 0,\n          n: 0,\n          v: e,\n          a: d,\n          f: d.bind(e, 4),\n          d: function d(t, r) {\n            return i = t, c = 0, u = e, G.n = r, a;\n          }\n        };\n      function d(r, n) {\n        for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) {\n          var o,\n            i = p[t],\n            d = G.p,\n            l = i[2];\n          r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0));\n        }\n        if (o || r > 1) return a;\n        throw y = !0, n;\n      }\n      return function (o, p, l) {\n        if (f > 1) throw TypeError(\"Generator is already running\");\n        for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) {\n          i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u);\n          try {\n            if (f = 2, i) {\n              if (c || (o = \"next\"), t = i[o]) {\n                if (!(t = t.call(i, u))) throw TypeError(\"iterator result is not an object\");\n                if (!t.done) return t;\n                u = t.value, c < 2 && (c = 0);\n              } else 1 === c && (t = i[\"return\"]) && t.call(i), c < 2 && (u = TypeError(\"The iterator does not provide a '\" + o + \"' method\"), c = 1);\n              i = e;\n            } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break;\n          } catch (t) {\n            i = e, c = 1, u = t;\n          } finally {\n            f = 1;\n          }\n        }\n        return {\n          value: t,\n          done: y\n        };\n      };\n    }(r, o, i), !0), u;\n  }\n  var a = {};\n  function Generator() {}\n  function GeneratorFunction() {}\n  function GeneratorFunctionPrototype() {}\n  t = Object.getPrototypeOf;\n  var c = [][n] ? t(t([][n]())) : (regeneratorDefine(t = {}, n, function () {\n      return this;\n    }), t),\n    u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c);\n  function f(e) {\n    return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, regeneratorDefine(e, o, \"GeneratorFunction\")), e.prototype = Object.create(u), e;\n  }\n  return GeneratorFunction.prototype = GeneratorFunctionPrototype, regeneratorDefine(u, \"constructor\", GeneratorFunctionPrototype), regeneratorDefine(GeneratorFunctionPrototype, \"constructor\", GeneratorFunction), GeneratorFunction.displayName = \"GeneratorFunction\", regeneratorDefine(GeneratorFunctionPrototype, o, \"GeneratorFunction\"), regeneratorDefine(u), regeneratorDefine(u, o, \"Generator\"), regeneratorDefine(u, n, function () {\n    return this;\n  }), regeneratorDefine(u, \"toString\", function () {\n    return \"[object Generator]\";\n  }), (module.exports = _regenerator = function _regenerator() {\n    return {\n      w: i,\n      m: f\n    };\n  }, module.exports.__esModule = true, module.exports[\"default\"] = module.exports)();\n}\nmodule.exports = _regenerator, module.exports.__esModule = true, module.exports[\"default\"] = module.exports;\n\n//# sourceURL=webpack://animais-fantasticos/./node_modules/@babel/runtime/helpers/regenerator.js?\n}");
+
+/***/ },
+
+/***/ "./node_modules/@babel/runtime/helpers/regeneratorAsync.js"
+/*!*****************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/regeneratorAsync.js ***!
+  \*****************************************************************/
+(module, __unused_webpack_exports, __webpack_require__) {
+
+eval("{var regeneratorAsyncGen = __webpack_require__(/*! ./regeneratorAsyncGen.js */ \"./node_modules/@babel/runtime/helpers/regeneratorAsyncGen.js\");\nfunction _regeneratorAsync(n, e, r, t, o) {\n  var a = regeneratorAsyncGen(n, e, r, t, o);\n  return a.next().then(function (n) {\n    return n.done ? n.value : a.next();\n  });\n}\nmodule.exports = _regeneratorAsync, module.exports.__esModule = true, module.exports[\"default\"] = module.exports;\n\n//# sourceURL=webpack://animais-fantasticos/./node_modules/@babel/runtime/helpers/regeneratorAsync.js?\n}");
+
+/***/ },
+
+/***/ "./node_modules/@babel/runtime/helpers/regeneratorAsyncGen.js"
+/*!********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/regeneratorAsyncGen.js ***!
+  \********************************************************************/
+(module, __unused_webpack_exports, __webpack_require__) {
+
+eval("{var regenerator = __webpack_require__(/*! ./regenerator.js */ \"./node_modules/@babel/runtime/helpers/regenerator.js\");\nvar regeneratorAsyncIterator = __webpack_require__(/*! ./regeneratorAsyncIterator.js */ \"./node_modules/@babel/runtime/helpers/regeneratorAsyncIterator.js\");\nfunction _regeneratorAsyncGen(r, e, t, o, n) {\n  return new regeneratorAsyncIterator(regenerator().w(r, e, t, o), n || Promise);\n}\nmodule.exports = _regeneratorAsyncGen, module.exports.__esModule = true, module.exports[\"default\"] = module.exports;\n\n//# sourceURL=webpack://animais-fantasticos/./node_modules/@babel/runtime/helpers/regeneratorAsyncGen.js?\n}");
+
+/***/ },
+
+/***/ "./node_modules/@babel/runtime/helpers/regeneratorAsyncIterator.js"
+/*!*************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/regeneratorAsyncIterator.js ***!
+  \*************************************************************************/
+(module, __unused_webpack_exports, __webpack_require__) {
+
+eval("{var OverloadYield = __webpack_require__(/*! ./OverloadYield.js */ \"./node_modules/@babel/runtime/helpers/OverloadYield.js\");\nvar regeneratorDefine = __webpack_require__(/*! ./regeneratorDefine.js */ \"./node_modules/@babel/runtime/helpers/regeneratorDefine.js\");\nfunction AsyncIterator(t, e) {\n  function n(r, o, i, f) {\n    try {\n      var c = t[r](o),\n        u = c.value;\n      return u instanceof OverloadYield ? e.resolve(u.v).then(function (t) {\n        n(\"next\", t, i, f);\n      }, function (t) {\n        n(\"throw\", t, i, f);\n      }) : e.resolve(u).then(function (t) {\n        c.value = t, i(c);\n      }, function (t) {\n        return n(\"throw\", t, i, f);\n      });\n    } catch (t) {\n      f(t);\n    }\n  }\n  var r;\n  this.next || (regeneratorDefine(AsyncIterator.prototype), regeneratorDefine(AsyncIterator.prototype, \"function\" == typeof Symbol && Symbol.asyncIterator || \"@asyncIterator\", function () {\n    return this;\n  })), regeneratorDefine(this, \"_invoke\", function (t, o, i) {\n    function f() {\n      return new e(function (e, r) {\n        n(t, i, e, r);\n      });\n    }\n    return r = r ? r.then(f, f) : f();\n  }, !0);\n}\nmodule.exports = AsyncIterator, module.exports.__esModule = true, module.exports[\"default\"] = module.exports;\n\n//# sourceURL=webpack://animais-fantasticos/./node_modules/@babel/runtime/helpers/regeneratorAsyncIterator.js?\n}");
+
+/***/ },
+
+/***/ "./node_modules/@babel/runtime/helpers/regeneratorDefine.js"
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/regeneratorDefine.js ***!
+  \******************************************************************/
+(module) {
+
+eval("{function _regeneratorDefine(e, r, n, t) {\n  var i = Object.defineProperty;\n  try {\n    i({}, \"\", {});\n  } catch (e) {\n    i = 0;\n  }\n  module.exports = _regeneratorDefine = function regeneratorDefine(e, r, n, t) {\n    function o(r, n) {\n      _regeneratorDefine(e, r, function (e) {\n        return this._invoke(r, n, e);\n      });\n    }\n    r ? i ? i(e, r, {\n      value: n,\n      enumerable: !t,\n      configurable: !t,\n      writable: !t\n    }) : e[r] = n : (o(\"next\", 0), o(\"throw\", 1), o(\"return\", 2));\n  }, module.exports.__esModule = true, module.exports[\"default\"] = module.exports, _regeneratorDefine(e, r, n, t);\n}\nmodule.exports = _regeneratorDefine, module.exports.__esModule = true, module.exports[\"default\"] = module.exports;\n\n//# sourceURL=webpack://animais-fantasticos/./node_modules/@babel/runtime/helpers/regeneratorDefine.js?\n}");
+
+/***/ },
+
+/***/ "./node_modules/@babel/runtime/helpers/regeneratorKeys.js"
+/*!****************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/regeneratorKeys.js ***!
+  \****************************************************************/
+(module) {
+
+eval("{function _regeneratorKeys(e) {\n  var n = Object(e),\n    r = [];\n  for (var t in n) r.unshift(t);\n  return function e() {\n    for (; r.length;) if ((t = r.pop()) in n) return e.value = t, e.done = !1, e;\n    return e.done = !0, e;\n  };\n}\nmodule.exports = _regeneratorKeys, module.exports.__esModule = true, module.exports[\"default\"] = module.exports;\n\n//# sourceURL=webpack://animais-fantasticos/./node_modules/@babel/runtime/helpers/regeneratorKeys.js?\n}");
+
+/***/ },
+
+/***/ "./node_modules/@babel/runtime/helpers/regeneratorRuntime.js"
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/regeneratorRuntime.js ***!
+  \*******************************************************************/
+(module, __unused_webpack_exports, __webpack_require__) {
+
+eval("{var OverloadYield = __webpack_require__(/*! ./OverloadYield.js */ \"./node_modules/@babel/runtime/helpers/OverloadYield.js\");\nvar regenerator = __webpack_require__(/*! ./regenerator.js */ \"./node_modules/@babel/runtime/helpers/regenerator.js\");\nvar regeneratorAsync = __webpack_require__(/*! ./regeneratorAsync.js */ \"./node_modules/@babel/runtime/helpers/regeneratorAsync.js\");\nvar regeneratorAsyncGen = __webpack_require__(/*! ./regeneratorAsyncGen.js */ \"./node_modules/@babel/runtime/helpers/regeneratorAsyncGen.js\");\nvar regeneratorAsyncIterator = __webpack_require__(/*! ./regeneratorAsyncIterator.js */ \"./node_modules/@babel/runtime/helpers/regeneratorAsyncIterator.js\");\nvar regeneratorKeys = __webpack_require__(/*! ./regeneratorKeys.js */ \"./node_modules/@babel/runtime/helpers/regeneratorKeys.js\");\nvar regeneratorValues = __webpack_require__(/*! ./regeneratorValues.js */ \"./node_modules/@babel/runtime/helpers/regeneratorValues.js\");\nfunction _regeneratorRuntime() {\n  \"use strict\";\n\n  var r = regenerator(),\n    e = r.m(_regeneratorRuntime),\n    t = (Object.getPrototypeOf ? Object.getPrototypeOf(e) : e.__proto__).constructor;\n  function n(r) {\n    var e = \"function\" == typeof r && r.constructor;\n    return !!e && (e === t || \"GeneratorFunction\" === (e.displayName || e.name));\n  }\n  var o = {\n    \"throw\": 1,\n    \"return\": 2,\n    \"break\": 3,\n    \"continue\": 3\n  };\n  function a(r) {\n    var e, t;\n    return function (n) {\n      e || (e = {\n        stop: function stop() {\n          return t(n.a, 2);\n        },\n        \"catch\": function _catch() {\n          return n.v;\n        },\n        abrupt: function abrupt(r, e) {\n          return t(n.a, o[r], e);\n        },\n        delegateYield: function delegateYield(r, o, a) {\n          return e.resultName = o, t(n.d, regeneratorValues(r), a);\n        },\n        finish: function finish(r) {\n          return t(n.f, r);\n        }\n      }, t = function t(r, _t, o) {\n        n.p = e.prev, n.n = e.next;\n        try {\n          return r(_t, o);\n        } finally {\n          e.next = n.n;\n        }\n      }), e.resultName && (e[e.resultName] = n.v, e.resultName = void 0), e.sent = n.v, e.next = n.n;\n      try {\n        return r.call(this, e);\n      } finally {\n        n.p = e.prev, n.n = e.next;\n      }\n    };\n  }\n  return (module.exports = _regeneratorRuntime = function _regeneratorRuntime() {\n    return {\n      wrap: function wrap(e, t, n, o) {\n        return r.w(a(e), t, n, o && o.reverse());\n      },\n      isGeneratorFunction: n,\n      mark: r.m,\n      awrap: function awrap(r, e) {\n        return new OverloadYield(r, e);\n      },\n      AsyncIterator: regeneratorAsyncIterator,\n      async: function async(r, e, t, o, u) {\n        return (n(e) ? regeneratorAsyncGen : regeneratorAsync)(a(r), e, t, o, u);\n      },\n      keys: regeneratorKeys,\n      values: regeneratorValues\n    };\n  }, module.exports.__esModule = true, module.exports[\"default\"] = module.exports)();\n}\nmodule.exports = _regeneratorRuntime, module.exports.__esModule = true, module.exports[\"default\"] = module.exports;\n\n//# sourceURL=webpack://animais-fantasticos/./node_modules/@babel/runtime/helpers/regeneratorRuntime.js?\n}");
+
+/***/ },
+
+/***/ "./node_modules/@babel/runtime/helpers/regeneratorValues.js"
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/regeneratorValues.js ***!
+  \******************************************************************/
+(module, __unused_webpack_exports, __webpack_require__) {
+
+eval("{var _typeof = (__webpack_require__(/*! ./typeof.js */ \"./node_modules/@babel/runtime/helpers/typeof.js\")[\"default\"]);\nfunction _regeneratorValues(e) {\n  if (null != e) {\n    var t = e[\"function\" == typeof Symbol && Symbol.iterator || \"@@iterator\"],\n      r = 0;\n    if (t) return t.call(e);\n    if (\"function\" == typeof e.next) return e;\n    if (!isNaN(e.length)) return {\n      next: function next() {\n        return e && r >= e.length && (e = void 0), {\n          value: e && e[r++],\n          done: !e\n        };\n      }\n    };\n  }\n  throw new TypeError(_typeof(e) + \" is not iterable\");\n}\nmodule.exports = _regeneratorValues, module.exports.__esModule = true, module.exports[\"default\"] = module.exports;\n\n//# sourceURL=webpack://animais-fantasticos/./node_modules/@babel/runtime/helpers/regeneratorValues.js?\n}");
+
+/***/ },
+
+/***/ "./node_modules/@babel/runtime/helpers/typeof.js"
+/*!*******************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/typeof.js ***!
+  \*******************************************************/
+(module) {
+
+eval("{function _typeof(o) {\n  \"@babel/helpers - typeof\";\n\n  return module.exports = _typeof = \"function\" == typeof Symbol && \"symbol\" == typeof Symbol.iterator ? function (o) {\n    return typeof o;\n  } : function (o) {\n    return o && \"function\" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? \"symbol\" : typeof o;\n  }, module.exports.__esModule = true, module.exports[\"default\"] = module.exports, _typeof(o);\n}\nmodule.exports = _typeof, module.exports.__esModule = true, module.exports[\"default\"] = module.exports;\n\n//# sourceURL=webpack://animais-fantasticos/./node_modules/@babel/runtime/helpers/typeof.js?\n}");
+
+/***/ },
+
+/***/ "./node_modules/@babel/runtime/regenerator/index.js"
+/*!**********************************************************!*\
+  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
+  \**********************************************************/
+(module, __unused_webpack_exports, __webpack_require__) {
+
+eval("{// TODO(Babel 8): Remove this file.\n\nvar runtime = __webpack_require__(/*! ../helpers/regeneratorRuntime */ \"./node_modules/@babel/runtime/helpers/regeneratorRuntime.js\")();\nmodule.exports = runtime;\n\n// Copied from https://github.com/facebook/regenerator/blob/main/packages/runtime/runtime.js#L736=\ntry {\n  regeneratorRuntime = runtime;\n} catch (accidentalStrictMode) {\n  if (typeof globalThis === \"object\") {\n    globalThis.regeneratorRuntime = runtime;\n  } else {\n    Function(\"r\", \"regeneratorRuntime = r\")(runtime);\n  }\n}\n\n\n//# sourceURL=webpack://animais-fantasticos/./node_modules/@babel/runtime/regenerator/index.js?\n}");
+
+/***/ },
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js"
+/*!*********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js ***!
+  \*********************************************************************/
+(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _asyncToGenerator)\n/* harmony export */ });\nfunction asyncGeneratorStep(n, t, e, r, o, a, c) {\n  try {\n    var i = n[a](c),\n      u = i.value;\n  } catch (n) {\n    return void e(n);\n  }\n  i.done ? t(u) : Promise.resolve(u).then(r, o);\n}\nfunction _asyncToGenerator(n) {\n  return function () {\n    var t = this,\n      e = arguments;\n    return new Promise(function (r, o) {\n      var a = n.apply(t, e);\n      function _next(n) {\n        asyncGeneratorStep(a, r, o, _next, _throw, \"next\", n);\n      }\n      function _throw(n) {\n        asyncGeneratorStep(a, r, o, _next, _throw, \"throw\", n);\n      }\n      _next(void 0);\n    });\n  };\n}\n\n\n//# sourceURL=webpack://animais-fantasticos/./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js?\n}");
+
+/***/ }
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	const __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		const cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		const module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		if (!(moduleId in __webpack_modules__)) {
+/******/ 			delete __webpack_module_cache__[moduleId];
+/******/ 			const e = new Error("Cannot find module '" + moduleId + "'");
+/******/ 			e.code = 'MODULE_NOT_FOUND';
+/******/ 			throw e;
+/******/ 		}
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			const getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter/value functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			if(Array.isArray(definition)) {
+/******/ 				var i = 0;
+/******/ 				while(i < definition.length) {
+/******/ 					var key = definition[i++];
+/******/ 					var binding = definition[i++];
+/******/ 					if(!__webpack_require__.o(exports, key)) {
+/******/ 						if(binding === 0) {
+/******/ 							Object.defineProperty(exports, key, { enumerable: true, value: definition[i++] });
+/******/ 						} else {
+/******/ 							Object.defineProperty(exports, key, { enumerable: true, get: binding });
+/******/ 						}
+/******/ 					} else if(binding === 0) { i++; }
+/******/ 				}
+/******/ 			} else {
+/******/ 				for(var key in definition) {
+/******/ 					if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 						Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 					}
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	let __webpack_exports__ = __webpack_require__("./js/script.js");
+/******/ 	
+/******/ })()
+;
