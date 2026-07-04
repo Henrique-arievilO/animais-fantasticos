@@ -1,4 +1,4 @@
-import initSmoothScroll from "./modules/initSmoothScroll.js";
+import SmoothScroll from "./modules/initSmoothScroll.js";
 import initTabNav from "./modules/initTabNav.js";
 import initAnimeScroll from "./modules/initAnimeScroll.js";
 import initAccordion from "./modules/initAccordion.js";
@@ -12,9 +12,11 @@ import initFetchBitcoin from "./modules/initFetchBitcoin.js";
 // import $ from "jquery";
 // import _ from "lodash";
 
+const smoothScroll = new SmoothScroll('[data-menu="smooth"] a[href^="#"]');
+smoothScroll.init();
+
 initAccordion();
 initTabNav();
-initSmoothScroll();
 initAnimeScroll();
 initModal();
 initTooltip();
