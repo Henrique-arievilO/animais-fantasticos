@@ -1,4 +1,4 @@
-import initAnimaNumbers from "./initAnimaNumbers.js";
+import AnimaNumbers from "./initAnimaNumbers.js";
 
 export default function initFetchAnimais() {
   async function fetchAnimais(url) {
@@ -11,7 +11,14 @@ export default function initFetchAnimais() {
         const gridNumber = document.querySelector(".grid-numbers");
         gridNumber.appendChild(divAnimal);
       });
-      initAnimaNumbers();
+
+      const animaNumbers = new AnimaNumbers(
+        "[data-number]",
+        ".numbers",
+        "active",
+      );
+
+      animaNumbers.init();
     } catch (error) {
       window.alert(Error(error));
     }
