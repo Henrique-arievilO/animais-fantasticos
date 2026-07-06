@@ -8,7 +8,7 @@ import fetchAnimals from "./modules/initFetchAnimais.js";
 import initDropdownMenu from "./modules/initDropdownMenu.js";
 import initMenuMobile from "./modules/initMenuMobile.js";
 import initOperation from "./modules/initOperation.js";
-import initFetchBitcoin from "./modules/initFetchBitcoin.js";
+import fetchBitcoin from "./modules/initFetchBitcoin.js";
 import initAnimeScroll from "./modules/initAnimeScroll.js";
 
 const smoothScroll = new SmoothScroll('[data-menu="smooth"] a[href^="#"]');
@@ -29,10 +29,10 @@ accordion.init();
 tabnav.init();
 modal.init();
 tooltip.init();
-fetchAnimals('../animaisApi.json', ".grid-numbers");
+fetchAnimals("../animaisApi.json", ".grid-numbers");
 
 initDropdownMenu();
 initMenuMobile();
 initOperation();
-initFetchBitcoin();
+fetchBitcoin("https://blockchain.info/ticker", ".btc-price");
 initAnimeScroll();
