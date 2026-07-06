@@ -3,10 +3,11 @@ import Accordion from "./modules/initAccordion.js";
 import TabNav from "./modules/initTabNav.js";
 import Modal from "./modules/initModal.js";
 import Tooltip from "./modules/initTooltip.js";
+import fetchAnimals from "./modules/initFetchAnimais.js";
+//separador
 import initDropdownMenu from "./modules/initDropdownMenu.js";
 import initMenuMobile from "./modules/initMenuMobile.js";
 import initOperation from "./modules/initOperation.js";
-import initFetchAnimais from "./modules/initFetchAnimais.js";
 import initFetchBitcoin from "./modules/initFetchBitcoin.js";
 import initAnimeScroll from "./modules/initAnimeScroll.js";
 
@@ -28,10 +29,10 @@ accordion.init();
 tabnav.init();
 modal.init();
 tooltip.init();
+fetchAnimals('../animaisApi.json', ".grid-numbers");
 
 initDropdownMenu();
 initMenuMobile();
 initOperation();
-initFetchAnimais();
 initFetchBitcoin();
 initAnimeScroll();
