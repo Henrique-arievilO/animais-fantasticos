@@ -1,4 +1,4 @@
-guimport SmoothScroll from "./modules/initSmoothScroll.js";
+import SmoothScroll from "./modules/initSmoothScroll.js";
 import Accordion from "./modules/initAccordion.js";
 import TabNav from "./modules/initTabNav.js";
 import Modal from "./modules/initModal.js";
@@ -25,7 +25,7 @@ const modal = new Modal(
 const tooltip = new Tooltip("[data-tooltip]");
 const scrollAnimation = new ScrollAnimation('[data-anime="scroll"');
 
-fetchAnimals("animaisApi.json", ".grid-numbers");
+fetchAnimals("./animaisApi.json", ".grid-numbers");
 fetchBitcoin("https://blockchain.info/ticker", ".btc-price");
 
 smoothScroll.init();
