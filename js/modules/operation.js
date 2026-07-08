@@ -25,7 +25,7 @@ export default class initOperation {
 
   open() {
     if (this.isOpen()) {
-      this.operation.classList.add(openClass);
+      this.operation.classList.add(this.openClass);
     }
   }
 

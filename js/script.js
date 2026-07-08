@@ -1,14 +1,14 @@
-import SmoothScroll from "./modules/initSmoothScroll.js";
-import Accordion from "./modules/initAccordion.js";
-import TabNav from "./modules/initTabNav.js";
-import Modal from "./modules/initModal.js";
-import Tooltip from "./modules/initTooltip.js";
-import fetchAnimals from "./modules/initFetchAnimais.js";
-import fetchBitcoin from "./modules/initFetchBitcoin.js";
-import ScrollAnimation from "./modules/ScrollAnimation.js";
-import DropdownMenu from "./modules/initDropdownMenu.js";
-import MenuMobile from "./modules/initMenuMobile.js";
-import Operation from "./modules/initOperation.js";
+import Accordion from "./modules/accordion.js";
+import DropdownMenu from "./modules/dropdownMenu.js";
+import fetchAnimals from "./modules/fetchAnimais.js";
+import fetchBitcoin from "./modules/fetchBitcoin.js";
+import MenuMobile from "./modules/menuMobile.js";
+import Modal from "./modules/modal.js";
+import Operation from "./modules/operation.js";
+import ScrollAnimation from "./modules/scrollAnimation.js";
+import SmoothScroll from "./modules/smoothScroll.js";
+import TabNav from "./modules/tabNav.js";
+import Tooltip from "./modules/tooltip.js";
 
 const smoothScroll = new SmoothScroll('[data-menu="smooth"] a[href^="#"]');
 const accordion = new Accordion('[data-anime="accordion"] dt');
