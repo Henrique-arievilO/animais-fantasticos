@@ -215,7 +215,7 @@ body {
   }
 
   .grid-section {
-    grid-template-columns: 100px, 1fr;
+    grid-template-columns: 100px 1fr;
     grid-gap: 10px;
   }
 
@@ -243,6 +243,12 @@ body {
 
   .copy {
     margin-bottom: 0;
+  }
+}
+
+@media (max-width: 350px) {
+    .grid-section h1 {
+    font-size: 2rem;
   }
 }
 
