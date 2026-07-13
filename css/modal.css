@@ -37,7 +37,9 @@
   border: 8px solid #1e2631;
   box-shadow: 0 0 0 8px #030812;
   position: relative;
-  min-width: 300px;
+  max-width: 600px;
+  width: 80vw;
+  box-sizing: border-box;
 }
 
 .close {
@@ -46,14 +48,10 @@
   position: absolute;
   top: -32px;
   right: -32px;
-  background: #1f53ba;
+  background: #1f53ba url(../imgs/close.svg) no-repeat center center;
   border: 4px solid #030812;
   border-radius: 50%;
   box-shadow: 0 4px 4px 0 #eff4fc10;
-  font-size: 2rem;
-  color: #eff4fc;
-  font-family: "IBM Plex Mono", monospace;
-  text-align: center;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -61,7 +59,7 @@
 }
 
 .close:hover {
-  background: #1c48a6;
+  background: #1c48a6 url(../imgs/close.svg) no-repeat center center;
 }
 
 .modal label {
@@ -75,6 +73,14 @@
   width: 100%;
   padding: .7rem .5rem;
   box-sizing: border-box;
+  border: solid 2px #1e2631;
+  border-radius: 0;
+}
+
+.modal input:focus {
+  border: solid 2px #1c48a6;
+  border-radius: 0;
+  outline: none;
 }
 
 .modal button[type="submit"] {

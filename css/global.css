@@ -247,7 +247,7 @@ body {
 }
 
 @media (max-width: 350px) {
-    .grid-section h1 {
+  .grid-section h1 {
     font-size: 2rem;
   }
 }
@@ -297,14 +297,18 @@ body {
 }
 
 [data-anime="accordion"] dt::after {
-  content: "⤵";
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: url(../imgs/arrow-blue.svg) no-repeat center center;
   display: inline-block;
   margin-left: 10px;
-  transition: 1s ease-in;
+  transition: .3s ease-in;
 }
 
 [data-anime="accordion"] dt.active::after {
-  content: "⤴";
+  content: "";
+  transform: rotateX(180deg);
 }
 
 [data-anime="accordion"] dd.active {
@@ -341,4 +345,11 @@ body {
   font-weight: 700;
   border-radius: 2px;
   color: #030812;
+}
+
+.arrow-white {
+  background: url(../imgs/arrow-right.svg) no-repeat center center;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
 }
